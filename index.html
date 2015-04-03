@@ -93,8 +93,8 @@ math.factorial(num);
 			<pre><code>
 &lt;script src="http://imagine-it.org/math.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-  var answer = math.sum(2, 2);
-  alert(answer);
+	var answer = math.sum(2, 2);
+	alert(answer);
 &lt;/script&gt;
 			</code></pre>
 			<p>We include the library before our JavaScript so that it loads before our code does.</p>
@@ -126,7 +126,7 @@ math.factorial(num);
 			<pre><code>
 var elems = document.getElementsByTagName("img");
 for (var i = 0; i &lt; elems.length; i++) {
-  elems[i].style.display = "none";
+	elems[i].style.display = "none";
 }
 			</code></pre>
 			<div class="fragment">
@@ -245,7 +245,7 @@ $(document).ready()
 			<p>Using our existing example, we would write:</p>
 			<pre><code>
 $(document).ready(function() {
-  $('p').addClass('special');
+	$('p').addClass('special');
 });
 			</code></pre>
 			<p>This will add the class <code>special</code> to all of the <code>p</code> elements.</p>
@@ -260,6 +260,113 @@ $(document).ready(function() {
 				<li>Use jQuery to add a class to every image on the page</li>
 				<li>Open <code>index.html</code> in Chrome (or Firefox); inspect an image element and make sure the class you added is there!</li>
 			</ul>
+		</section>
+
+		<section>
+			<h1>Selectors</h1>
+			<p>All CSS selectors are valid, plus more.</p>
+			<p><a href="http://api.jquery.com/category/selectors/" target="_blank">Selectors documentation</a></p>
+		</section>
+
+		<section>
+			<h1>Selecting HTML Elements</h1>
+			<p>With this HTML:</p>
+			<pre><code>
+&lt;p&gt;Welcome!&lt;/p&gt;
+			</code></pre>
+			<p>We find it this way:</p>
+			<pre><code>
+$('p')
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Selecting by ID</h1>
+			<p>With this HTML:</p>
+			<pre><code>
+&lt;div id="main"&gt;Welcome!&lt;/div&gt;
+			</code></pre>
+			<p>We find it this way:</p>
+			<pre><code>
+$('#main')
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Selecting by class</h1>
+			<p>With this HTML:</p>
+			<pre><code>
+&lt;div class="intro"&gt;Welcome!&lt;/div&gt;
+			</code></pre>
+			<p>We find it this way:</p>
+			<pre><code>
+$('.intro')
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Complex selectors</h1>
+			<p>With this HTML:</p>
+			<pre><code>
+&lt;div id="main"&gt;
+	&lt;div class="intro"&gt;Welcome!&lt;/div&gt;
+&lt;/div&gt;
+			</code></pre>
+			<p>We find it this way:</p>
+			<pre><code>
+$('#main .intro')
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Open <code>index.html</code> in a browser</p>
+			<ul>
+				<li>Find all of the <code>section</code> elements on the page</li>
+				<li>Find all of the <code>article</code> elements on the page</li>
+				<li>Find some more elements!</li>
+				<li>Try classes!</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>Getters</h1>
+			<p>Getters return information about the HTML.</p>
+			<pre><code>
+&lt;p&gt;Welcome!&lt;/p&gt;
+			</code></pre>
+			<pre><code>
+var html = $('p').html();
+console.log(html);
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Getters</h1>
+			<p>Sometimes they take arguments to narrow our focus:</p>
+			<pre><code>
+&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;
+			</code></pre>
+			<pre><code>
+var href = $('a').attr('href');
+console.log(href);
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Setters</h1>
+			<p>Setters change the HTML.</p>
+			<p>They almost always take an argument (sometimes more than one).</p>
+			<pre><code>
+&lt;p&gt;Welcome!&lt;/p&gt;
+			</code></pre>
+			<pre><code>
+$('p').html("Hello");
+			</code></pre>
+			<p>Will change your HTML to:</p>
+			<pre><code>
+&lt;p&gt;Hello&lt;/p&gt;
+			</code></pre>
 		</section>
 
 		<section>
