@@ -337,7 +337,7 @@ $('#main .intro')
 			</code></pre>
 			<pre><code>
 var html = $('p').html();
-console.log(html);
+//Welcome!
 			</code></pre>
 		</section>
 
@@ -349,8 +349,66 @@ console.log(html);
 			</code></pre>
 			<pre><code>
 var href = $('a').attr('href');
-console.log(href);
+//http://www.google.com
 			</code></pre>
+		</section>
+
+		<section>
+			<h1>Getters</h1>
+			<p>There's lots of information we can get from HTML.</p>
+			<p>Starting with this HTML:</p>
+			<pre><code>
+&lt;a href="http://www.yahoo.com" style="color:purple"&gt;Yahoo&lt;/a&gt;
+			</code></pre>
+			<p>We can find out lots of fun things!
+</p>
+		</section>
+
+		<section>
+			<h1><code>html()</code></h1>
+			<p>Gets the HTML contents of the first element that matches your selector.</p>
+			<pre><code>
+&lt;a href="http://www.yahoo.com" style="color:purple"&gt;Yahoo&lt;/a&gt;
+			</code></pre>
+			<pre><code>
+var html = $('a').html();
+//Yahoo
+			</code></pre>
+			<p><a href="http://api.jquery.com/html/" target="_blank"><code>html()</code> documentation</a></p>
+		</section>
+
+		<section>
+			<h1><code>attr()</code></h1>
+			<p>Gets the value of a specific attribute for the first element that matches your selector.</p>
+			<pre><code>
+&lt;a href="http://www.yahoo.com" style="color:purple"&gt;Yahoo&lt;/a&gt;
+			</code></pre>
+			<pre><code>
+var href = $('a').attr('href');
+//http://www.yahoo.com
+			</code></pre>
+			<p><a href="http://api.jquery.com/attr/" target="_blank"><code>attr()</code> documentation</a></p>
+		</section>
+
+		<section>
+			<h1><code>css()</code></h1>
+			<p>Gets the value of the style property for first element that matches your selector.</p>
+			<pre><code>
+&lt;a href="http://www.yahoo.com" style="color:purple"&gt;Yahoo&lt;/a&gt;
+			</code></pre>
+			<pre><code>
+var color = $('a').css('color');
+//purple
+			</code></pre>
+			<p><a href="http://api.jquery.com/css/" target="_blank"><code>css()</code> documentation</a></p>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Open <code>index.html</code> in a browser</p>
+			<ul>
+				<li>Use <code>html()</code>, <code>attr()</code>, and <code>css()</code> to get the values of various properties</li>
+			</ul>
 		</section>
 
 		<section>
@@ -358,15 +416,65 @@ console.log(href);
 			<p>Setters change the HTML.</p>
 			<p>They almost always take an argument (sometimes more than one).</p>
 			<pre><code>
-&lt;p&gt;Welcome!&lt;/p&gt;
+&lt;a href="http://www.google.com" style="color:purple"&gt;Google&lt;/a&gt;
+			</code></pre>
+		</section>
+
+		<section>
+			<h1><code>html('value')</code></h1>
+			<pre><code>
+&lt;a href="http://www.google.com" style="color:purple"&gt;Google&lt;/a&gt;
 			</code></pre>
 			<pre><code>
-$('p').html("Hello");
+$('a').html('Yahoo!');
 			</code></pre>
-			<p>Will change your HTML to:</p>
+			<p>Changes the HTML to:</p>
 			<pre><code>
-&lt;p&gt;Hello&lt;/p&gt;
+&lt;a href="http://www.google.com" style="color:purple"&gt;Yahoo&lt;/a&gt;
 			</code></pre>
+			<p><a href="http://api.jquery.com/html/" target="_blank"><code>html()</code> documenation</a></p>
+		</section>
+
+		<section>
+			<h1 style="white-space:nowrap;"><code>attr('attribute', 'value')</code></h1>
+			<p>Sets the value of the property for <strong>all elements</strong> that match your selector.</p>
+			<pre><code>
+&lt;a href="http://www.google.com" style="color:purple"&gt;Google&lt;/a&gt;
+			</code></pre>
+			<pre><code>
+$('a').attr('href', 'http://www.yahoo.com');
+			</code></pre>
+			<p>Changes the HTML to:</p>
+			<pre><code>
+&lt;a href="http://www.yahoo.com" style="color:purple"&gt;Google&lt;/a&gt;
+			</code></pre>
+			<p><a href="http://api.jquery.com/attr/" target="_blank"><code>attr()</code> documenation</a></p>
+		</section>
+
+		<section>
+			<h1 style="white-space:nowrap;"><code>css({'property': 'value'})</code></h1>
+			<p>Sets the value of the style property for first element that matches your selector. <strong>Note the syntax difference here!</strong></p>
+			<pre><code>
+&lt;a href="http://www.google.com" style="color:purple"&gt;Google&lt;/a&gt;
+			</code></pre>
+			<pre><code>
+$('a').css({'color': 'red'});
+			</code></pre>
+			<p>Changes the HTML to:</p>
+			<pre><code>
+&lt;a href="http://www.google.com" style="color:red"&gt;Google&lt;/a&gt;
+			</code></pre>
+			<p><a href="http://api.jquery.com/css/" target="_blank"><code>css()</code> documenation</a></p>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Open <code>index.html</code> in a browser</p>
+			<ul>
+				<li>Use <code>html()</code>, <code>attr()</code>, and <code>css()</code> to change your page</li>
+				<li>Refresh the page - what happens?</li>
+				<li>Try the same thing in <code>main.js</code> instead of console</li>
+			</ul>
 		</section>
 
 		<section>
