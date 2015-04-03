@@ -1,470 +1,297 @@
 <!doctype html>
 <html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>JavaScript 201: Intro to jQuery</title>
+	<meta name="description" content="This is an introduction to jQuery for students who have basic knowledge of JavaScript">
+	<meta name="author" content="Girl Develop It">
 
-	<head>
-		<meta charset="utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<title>JavaScript 201: Intro to jQuery</title>
+	<link rel="stylesheet" href="reveal/css/reveal.css">
+	<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+	<link rel="stylesheet" href="css/custom.css">
 
-		<meta name="description" content="This is an introduction to jQuery for students who have basic knowledge of JavaScript">
-		<meta name="author" content="Girl Develop It">
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="reveal/lib/css/dark.css">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<!-- If use the PDF print sheet so students can print slides-->
+	<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
-		<link rel="stylesheet" href="css/custom.css">
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+<body>
 
-		<!-- If use the PDF print sheet so students can print slides-->
 
-		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-		<!-- Any section element inside of this container is displayed as a slide -->
-		<div class="slides">
+<div class="reveal">
+	<!-- Any section element inside of this container is displayed as a slide -->
+	<div class="slides">
 		<!-- Opening slide -->
-			<section>
-				<img src="images/gdi_logo_badge.png" alt="GDI logo">
-				<h3>JavaScript 201: Intro to jQuery</h3>
-			</section>
+		<section>
+			<img src="images/gdi_logo_badge.png" alt="GDI logo">
+			<h1>JavaScript 201:<br/>Intro to jQuery</h1>
+		</section>
 
-
-			<section>
-				<h3>Welcome!</h3>
-				<div class = "left-align">
+		<section>
+			<h1>Welcome!</h1>
+			<div class="left-align">
 				<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
 				<p class ="green">Some "rules"</p>
 				<ul>
-				<li>Every question is important.</li>
-				<li>Help each other.</li>
-				<li>Have fun.</li>
-				<li>Learn and return.</li>
+					<li>Every question is important.</li>
+					<li>Help each other.</li>
+					<li>Have fun.</li>
+					<li>Learn and return.</li>
 				</ul>
-				</div>
-			</section>
+			</div>
+		</section>
 
-			<section>
-				<h3>Welcome!</h3>
-				<div class = "left-align">
-				<p class = "blue">Tell us about yourself. </p>
+		<section>
+			<h1>Welcome!</h1>
+			<div class="left-align">
+				<p class="blue">Tell us about yourself. </p>
 				<ul>
 					<li>Who are you?</li>
 					<li>What do you hope to get out of the class?</li>
 					<li>What's something no one in this room knows about you?</li>
 				</ul>
-				</div>
-			</section>
+			</div>
+		</section>
 
-			<section>
-				<h3>Follow along!</h3>
-				<div class="center-align">
-					<p>Access the slides to follow along here:</p>
-					<p><a href="http://gdila.github.io/js201">http://gdila.github.io/js201</a></p>
-				</div>
-			</section>
+		<section>
+			<h1>Follow along!</h1>
+			<div class="center-align">
+				<p>Access the slides to follow along here:</p>
+				<p><a href="http://gdila.github.io/js201">http://gdila.github.io/js201</a></p>
+			</div>
+		</section>
 
-			<section>
-				<h3>What is JavaScript?</h3>
-				<ul>
-					<li>JavaScript is standardized by the "ECMAScript" specifications.</li>
-					<li class="fragment">JavaScript is a client-side processing language. A browser reads the code and runs it directly.</li>
-					<li class="fragment">JavaScript interfaces with HTML and CSS.</li>
-					<li class="fragment">With JavaScript, you can write code once and use it everywhere. Remember, you want DRY code (Don't Repeat Yourself).</li>
-					<li class="fragment">JavaScript lets you build dynamic webpages that respond to input from users.</li>
-				</ul>
-			</section>
-			<section>
-				<h3>JavaScript is a client-side language</h3>
-				<img src="images/client-server.jpg" alt="Laptop and server connected via the internet"/>
-				<p class="credit">Photo credits: <a href="http://www.flickr.com/photos/papalars/5210226441/" target="_blank">Andrew E. Larson</a> and <a href="http://www.flickr.com/photos/johnseb/3425464/" target="_blank">John Seb Barber</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
-			</section>
-			<section>
-				<h3>Let's Develop It</h3>
-				<p>Let's write your first JavaScript program. Make a folder called <code>gdi</code>. Inside, make a new page called <code>index.html</code>. Place this code inside.</p>
+		<section>
+			<h1>jQuery is a JavaScript library</h1>
+			<h2 class="fragment">What is a library?</h2>
+			<p class="fragment" style="text-align:left;">A collection of reusable methods for a particular purpose.</p>
+			<div class="fragment">
+				<p style="text-align:left;">If we had a math library, it might have functions like:</p>
 				<pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-	&lt;title&gt;Test Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-	&lt;p&gt;This is my awesome JavaScript code.&lt;/p&gt;
+math.sum(array);
+math.pow(num, num);
+math.factorial(num);
+				</code></pre>
+			</div>
+		</section>
 
-	&lt;script&gt;
-		alert('Hello World!');
-	&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-				</code></pre>
-			</section>
+		<section>
+			<h1>Including a library</h1>
+			<ul>
+				<li>Include a <code>&lt;script&gt;</code> tag to the library on your page</li>
+				<li>Call functions from that library</li>
+			</ul>
+			<pre><code>
+&lt;script src="http://imagine-it.org/math.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  var answer = math.sum(2, 2);
+  alert(answer);
+&lt;/script&gt;
+			</code></pre>
+			<p>We include the library before our JavaScript so that it loads before our code does.</p>
+		</section>
 
-			<section>
-				<h3>Script Tags</h3>
-				<p>You can mix JavaScript and HTML. The <code>&lt;script&gt;</code> tag tells your browser the stuff inside is code, not content.</p>
-				<pre><code>
-&lt;script&gt;
-	CODE GOES HERE
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>JavaScript Files</h3>
-				<p>Just like CSS, you can split a long block of JavaScript into its own file. </p>
-				<pre><code>
-&lt;script src="path/to/file.js"&gt;&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Separating Instructions</h3>
-				<p>After each individual statement, you must add a semicolon.</p>
-				<pre><code>
-&lt;script&gt;
-	console.log('Hello World!');
-	console.log('I am glad to meet you');
-	console.log('I am fuzzy');
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Comments</h3>
-				<p>You can leave comments in your code&mdash;notes that people can read and computers will ignore.</p>
-				<pre><code>
-&lt;script&gt;
-	/*I can wrap long comments
-	with multiple lines
-	like this*/
-	console.log('Hello World!'); //Or mark short comments like this
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Getting results onto your screen</h3>
-				<p>Open a popup box.</p>
-				<pre><code>
-alert('Hello World!');
-				</code></pre>
-				<p>Display a message in your console.</p>
-				<pre><code>
-console.log('Hello World!');
-				</code></pre>
-				<p>Add something to the page.</p>
-				<pre><code>
-document.write('Hello World!');
-				</code></pre>
-			</section>
-			<section>
-				<h3>Let's Develop It</h3>
-				<ul>
-					<li>Open <code>index.html</code>. Add a comment to the code.</li>
-					<li>Try different ways of printing your message.</li>
-					<li>Create a new file called <code>mycode.js</code>. Move your code to this file and link it to your page.</li>
-				</ul>
-			</section>
+		<section>
+			<h1>Why use libraries?</h1>
+			<p class="fragment">Write less code for common tasks.</p>
+			<p class="fragment">Help solve cross-browser differences.</p>
+			<a href="http://jquery.com" target="_blank">
+				<img src="images/jquery.png" height="296" width="679" alt="" class="fragment">
+			</a>
+			<p class="fragment">Libraries can provide us with code that does all of this for us.</p>
+		</section>
 
-			<section>
-				<h3>Variables</h3>
-				<p>A variable is a place to store values</p>
-			</section>
-			<section>
-				<h3>Variable Values</h3>
-				<ul>
-					<li>When you first create a variable, it does not have a value (it is null).</li>
-					<li>You can set a value for a variable.</li>
-					<li>Variables can hold different types of information, like words, numbers, and collections of data.</li>
-					<li>The value of a variable can change over time.</li>
-				</ul>
-			</section>
-			<section>
-				<h3>Naming Variables</h3>
-				<ul>
-					<li>The variable name is case-sensitive.</li>
-					<li>A new variable needs to have a unique name.</li>
-					<li>Variable names need to start with a letter, <code>$</code>, or <code>_</code>.</li>
-					<li>Variable names can only be made of letters, numbers, <code>$</code>, or <code>_</code>.</li>
-				</ul>
-			</section>
-			<section>
-				<h3>Declaring a Variable</h3>
-				<p>To declare (create) a variable, just type the word <code>var</code> and the variable name.</p>
+		<section>
+			<h1>Why use jQuery?</h1>
+			<p>jQuery makes it easier for us to write code that is:</p>
+			<ul>
+				<li class="fragment">Shorter</li>
+				<li class="fragment">Cross-browser compatible</li>
+				<li class="fragment"><em>Way</em> less work</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>jQuery vs. JavaScript</h1>
+			<p>No library:</p>
+			<pre><code>
+var elems = document.getElementsByTagName("img");
+for (var i = 0; i &lt; elems.length; i++) {
+  elems[i].style.display = "none";
+}
+			</code></pre>
+			<div class="fragment">
+				<p>jQuery:</p>
 				<pre><code>
-&lt;script&gt;
-	var numberOfKittens;
-&lt;/script&gt;
+$('img').hide();
 				</code></pre>
-				<p>It is a good idea to give your variable a starting value. This is called initializing the variable.</p>
+			</div>
+		</section>
+
+		<section>
+			<h1>jQuery vs. JavaScript</h1>
+			<p>No library:</p>
+			<pre><code>
+var p = document.createElement('p');
+p.appendChild(document.createTextNode('Welcome!'));
+p.style.cssFloat = 'left';
+p.style.backgroundColor = 'red';
+p.className = 'special';
+document.querySelector('div.header').appendChild(p);
+			</code></pre>
+			<div class="fragment">
+				<p>jQuery:</p>
 				<pre><code>
-&lt;script&gt;
-	var numberOfKittens = 5;
-&lt;/script&gt;
+var newP = $('&lt;p&gt;Welcome!&lt;/p&gt;');
+newP.css({'float': 'left', 'background-color': 'red')
+newP.addClass('special');
+$('div.header').append(newP);
 				</code></pre>
-			</section>
-			<section>
-				<h3>Using a Variable</h3>
-				<p>Once you have created a variable, you can use it in your code. Just type the name of the variable.</p>
+			</div>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Download and unzip the <a href="http://gdila.github.io/js201/materials/materials.zip">class files</a></p>
+			<p>Before we use jQuery, we have to include the library just like our regular JavaScript files.</p>
+			<p>Add the line of code that will include jQuery in your <code>index.html</code> file</p>
+			<div class="fragment">
 				<pre><code>
-&lt;script&gt;
-	var numberOfKittens = 5;
-	console.log (numberOfKittens);
-&lt;/script&gt;
+&lt;script src="js/jquery-2.1.3.min.js"&gt;&lt;/script&gt;
 				</code></pre>
-			</section>
-			<section>
-				<h3>Let's Develop It</h3>
-				<p>In your JS file, create a variable and give it a valid name and a value. Then, display the value.</p>
-			</section>
+			</div>
+		</section>
+
+		<section>
+			<h1>Using a CDN</h1>
+			<p>Another way to include jQuery on your websites is to use a CDN.</p>
+			<pre><code>
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;
+			</code></pre>
+			<p><a href="http://goo.gl/iKFHs" target="_blank">Google CDN snippets</a></p>
+		</section>
+
+		<section>
+			<h1>How jQuery works</h1>
+			<p>We start with an HTML element:</p>
+			<pre><code>
+&lt;p&gt;Welcome to jQuery!&lt;/p&gt;
+			</code></pre>
+			<div class="fragment">
+				<p>Use jQuery to add a class to it:</p>
+				<pre><code>
+$('p').addClass('special');
+				</code></pre>
+			</div>
+			<div class="fragment">
+				<p>And tada! Our HTML now has a class:</p>
+				<pre><code>
+&lt;p class="special"&gt;Welcome to jQuery!&lt;/p&gt;
+				</code></pre>
+			</div>
+		</section>
+
+		<section>
+			<h1>Breaking it down</h1>
+			<p>We have one simple line of jQuery here, but there's a lot happening.</p>
+			<pre><code>
+$('p').addClass('special');
+			</code></pre>
+		</section>
+
+		<section>
+			<h1><code>$</code></h1>
+			<pre><code>
+$
+			</code></pre>
+			<p><code>$</code> is the global jQuery function.</p>
+			<p>You can also call this function <code>jQuery</code></p>
+		</section>
+
+		<section>
+			<h1><code>('p')</code></h1>
+			<pre><code>
+$('p')
+			</code></pre>
+			<p><code>('p')</code> finds DOM element(s) according to what's in the quotes. In our example, that's all <code>p</code> elements.</p>
+			<p>This returns a "jQuery collection" of all <code>p</code> elements in the DOM.</p>
+		</section>
+
+		<section>
+			<h1><code>addClass()</code></h1>
+			<pre><code>
+$('p').addClass('special');
+			</code></pre>
+			<p><code>.addClass()</code> is a built-in jQuery method that adds the specified class to the collection.</p>
+			<p>It takes one argument: a string that is the class name (special in our example).</p>
+			<p><a href="http://api.jquery.com/addClass/" target="_blank">addClass documentation</a></p>
+		</section>
+
+		<section>
+			<h1><code>$(document).ready()</code></h1>
+			<p>We don't want our code to run unless the DOM is ready for it. jQuery has a special function for this:</p>
+			<pre><code>
+$(document).ready()
+			</code></pre>
+			<p>Using our existing example, we would write:</p>
+			<pre><code>
+$(document).ready(function() {
+  $('p').addClass('special');
+});
+			</code></pre>
+			<p>This will add the class <code>special</code> to all of the <code>p</code> elements.</p>
+		</section>
+
+		<section>
+			<h1>Thank you!</h1>
+		</section>
 
 
-			<section>
-				<h3>Numbers</h3>
-				<p>Variable can be numbers, either integers or floats (decimals).</p>
-				<pre><code>
-&lt;script&gt;
-	var numberOfKittens = 5;
-	var cutenessRating = 9.6;
-&lt;/script&gt;
-				</code></pre>
-				<p>The browser will automatically convert integers to floats if needed</p>
-			</section>
-
-			<section>
-				<h3>Arithmetic Operators</h3>
-				<p>Once you have numbers, you can do math with them!</p>
-				<pre><code>
-&lt;script&gt;
-	var numberOfKittens = 5;
-	var numberOfPuppies = 4;
-	var numberOfAnimals = numberOfKittens + numberOfPuppies;
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Arithmetic Operators</h3>
-				<table>
-					<thead>
-						<tr>
-						 <th>Example</th>
-						 <th>Name</th>
-						 <th>Result</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-						 <td>-a</td>
-						 <td>Negation</td>
-						 <td>Opposite of a.</td>
-						</tr>
-						<tr>
-						 <td>a + b</td>
-						 <td>Addition</td>
-						 <td>Sum of a and b.</td>
-						</tr>
-						<tr>
-						 <td>a - b</td>
-						 <td>Subtraction</td>
-						 <td>Difference of a and b.</td>
-						</tr>
-						<tr>
-						 <td>a * b</td>
-						 <td>Multiplication</td>
-						 <td>Product of a and b.</td>
-						</tr>
-						<tr>
-						 <td>a / b</td>
-						 <td>Division</td>
-						 <td>Quotient of a and b.</td>
-						</tr>
-						<tr>
-						 <td>a % b</td>
-						 <td>Modulus</td>
-						 <td>Remainder of a divided by b.</td>
-						</tr>
-					</tbody>
-				</table>
-			</section>
-			<section>
-				<h3>Let's Develop It</h3>
-				<p>Create two variables and try some arithmetic operators. Don't forget to display your results!</p>
-			</section>
-
-			<section>
-				<h3>Strings</h3>
-				<p>Variable can be strings, groups of characters. You put your string in quotes.</p>
-				<pre><code>
-&lt;script&gt;
-	var kittensName = 'Fluffy';
-&lt;/script&gt;
-				</code></pre>
-				<p>If you want to use a quote in your string, you'll need to "escape" it with a backslash.</p>
-				<pre><code>
-&lt;script&gt;
-	console.log('I\'d like to use an apostrophe');
-&lt;/script&gt;
-				</code></pre>
-			</section>
-
-			<section>
-				<h3>String Operators</h3>
-				<p>You can put strings together with a <code>+</code>, the concatenation operator.</p>
-				<pre><code>
-&lt;script&gt;
-	var kittensName = 'Fluffy ';
-	var fullName = kittensName + ' McDougle';
-	console.log(fullName); //Outputs 'Fluffy McDougle'
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>String Operators</h3>
-				<p>You can also use <code>+=</code> to add things to the end of a string.</p>
-				<pre><code>
-&lt;script&gt;
-	var kittensName = 'Admiral ';
-	kittensName += ' Snuggles';
-	console.log(kittensName); //Outputs 'Admiral Snuggles'
-&lt;/script&gt;
-				</code></pre>
-			</section>
-
-			<section>
-				<h3>Let's Develop It</h3>
-				<p>Create two variables, a first name and a last name, and then put them together to make a full name. Don't forget to display your results!</p>
-			</section>
-
-			<section>
-				<h3>Functions</h3>
-				<p>Functions are separable, reusable pieces of code.
-
-			</section>
-			<section>
-				<h3>Using Functions</h3>
-				<p>First, declare the function.</p>
-				<pre><code>
-&lt;script&gt;
-	function turtleFact() {
-		console.log('A turtle\'s lower shell is called a plastron.');
-	}
-&lt;/script&gt;
-				</code></pre>
-				<p>Then, use it as many times as you want!</p>
-				<pre><code>
-&lt;script&gt;
-	turtleFact();
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Arguments</h3>
-				<p>Functions can accept input values, called arguments.</p>
-				<pre><code>
-&lt;script&gt;
-	function callKitten (kittenName){
-		console.log('Come here, ' + kittenName + '!');
-	}
-	callKitten ('Fluffy'); //outputs 'Come here, Fluffy!'
-
-	function addNumbers(a, b) {
-		console.log(a + b);
-	}
-	addNumbers(5,7); //outputs 12
-	addNumbers(9,12); //outputs 21
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Arguments</h3>
-				<p>You can also pass variables into functions. These variables do not need to have the same name as the function arguments.</p>
-				<pre><code>
-&lt;script&gt;
-	function addOne(inputNumber){
-		var newNumber = inputNumber + 1;
-		console.log('&lt;p&gt;You now have ' + newNumber);
-	}
-	//Declare variables
-	var numberOfKittens = 5;
-	var numberOfPuppies = 4;
-	//Use them in functions
-	addOne(numberOfKittens);
-	addOne(numberOfPuppies);
-&lt;/script&gt;
-				</code></pre>
-			</section>
-			<section>
-				<h3>Let's Develop It</h3>
-				<p>Turn the code you wrote to output someone's full name into a function, then use it.</p>
-			</section>
-			<section>
-				<h3>Returning Values</h3>
-				<p>You can have a function give you back a value, to use later.</p>
-				<pre><code>
-&lt;script&gt;
-	function square(num) {
-		return num * num;
-	}
-	console.log(square(4));   // outputs '16'.
-	var squareOfFive = square(5); // will make squareOfFive equal 25.
-&lt;/script&gt;
-				</code></pre>
-				<p>Return will immediately end a function.</p>
-			</section>
-			<section>
-				<h3>Let's Develop It</h3>
-				<p>Add a return statement to your name function. Use that function to set the value of a variable.</p>
-			</section>
-
-			<section>
-				<h1>Lunch time</h1>
-			</section>
-
-			</div><!-- Close .slides -->
-		<footer>
+	</div><!-- Close .slides -->
+	<footer>
 		<div class="copyright">
-			JavaScript for Beginners ~ Girl Develop It ~
+			JavaScript 201: Intro to jQuery ~ Girl Develop It ~
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 		</div><!-- Close .copyright -->
-		</footer>
-	</div><!-- Close .reveal -->
+	</footer>
+</div><!-- Close .reveal -->
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.min.js"></script>
+
+<script>
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		touch: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+</script>
 
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				touch: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/none
-
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+</body>
 </html>
