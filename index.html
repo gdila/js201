@@ -478,6 +478,60 @@ $('a').css({'color': 'red'});
 		</section>
 
 		<section>
+			<h1>Creating New Elements</h1>
+			<img src="images/patronus.gif" height="253" width="600" alt="">
+			<p>&hellip;using <del>magic</del> jQuery!</p>
+		</section>
+
+		<section>
+			<h1>Create simple elements</h1>
+			<p>Pass in any HTML string and jQuery will create it and return it as a collection.</p>
+			<p>With this jQuery:</p>
+			<pre><code>
+$('&lt;p&gt;');
+			</code></pre>
+			<p>We create this HTML:</p>
+			<pre><code>
+&lt;p&gt;&lt;/p&gt;
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Create complex elements</h1>
+			<p>With this jQuery:</p>
+			<pre><code>
+$('&lt;p&gt;Welcome&lt;/p&gt;');
+			</code></pre>
+			<p>We create this HTML:</p>
+			<pre><code>
+&lt;p&gt;Welcome&lt;/p&gt;
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>More complex elements</h1>
+			<p>With this jQuery:</p>
+			<pre><code>
+$('&lt;p class="intro"&gt;Welcome&lt;/p&gt;');
+			</code></pre>
+			<p>We create this HTML:</p>
+			<pre><code>
+&lt;p class="intro"&gt;Welcome&lt;/p&gt;
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Open <code>main.js</code> in a text editor</p>
+			<ul>
+				<li>Create some new elements</li>
+				<li>Try creating elements using <code>append()</code> or <code>appendTo()</code></li>
+			</ul>
+			<p><a href="http://api.jquery.com/append/" target="_blank"><code>append()</code> documentation</a></p>
+			<p><a href="http://api.jquery.com/appendTo/" target="_blank"><code>appendTo()</code> documentation</a></p>
+		</section>
+
+		<section>
 			<h1>Thank you!</h1>
 		</section>
 
