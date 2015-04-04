@@ -532,6 +532,51 @@ $('&lt;p class="intro"&gt;Welcome&lt;/p&gt;');
 		</section>
 
 		<section>
+			<h1>Loops Review</h1>
+			<p>Loops allow us to call a method on every item in a group efficiently.</p>
+			<p>With jQuery, we have a method called <code>each()</code> that we can use.</p>
+			<p>You can use each with an anonymous function, or with a named function.</p>
+		</section>
+
+		<section>
+			<h1><code>each()</code></h1>
+			<p><code>each()</code> can take an anonymous function:</p>
+			<pre><code>
+var links = $('a');
+
+links.each(function(index, elem) {
+	var link = $(elem);
+	link.html(link.html() + '!');
+});
+			</code></pre>
+		</section>
+
+		<section>
+			<h1><code>each()</code></h1>
+			<p><code>each()</code> can take a named function:</p>
+			<pre><code>
+var processElem = function(index, elem) {
+	var link = $(elem);
+	link.html(link.html() + '!');
+};
+
+var links = $('a');
+
+links.each(processElem);
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Open <code>main.js</code> in a text editor</p>
+			<ul class="left-align">
+				<li>Find all <code>p</code> elements</li>
+				<li>Write a loop that adds a class to those <code>p</code> elements (hint: <code>addClass()</code>)</li>
+				<li>Write a loop that changes a css property of those elements</li>
+			</ul>
+		</section>
+
+		<section>
 			<h1>Thank you!</h1>
 		</section>
 
