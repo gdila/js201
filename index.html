@@ -323,7 +323,7 @@ $('#main .intro')
 			<p>Open <code>index.html</code> in a browser</p>
 			<ul>
 				<li>Find all of the <code>section</code> elements on the page</li>
-				<li>Find all of the <code>article</code> elements on the page</li>
+				<li>Find all of the <code>li</code> elements on the page</li>
 				<li>Find some more elements!</li>
 				<li>Try classes!</li>
 			</ul>
@@ -534,6 +534,32 @@ $('&lt;p class="intro"&gt;Welcome&lt;/p&gt;');
 		<section>
 			<h1>Loops Review</h1>
 			<p>Loops allow us to call a method on every item in a group efficiently.</p>
+		</section>
+
+		<section>
+			<h1>While Review</h1>
+			<p>While will repeat the same code over and over until some condition is met.</p>
+			<pre><code>
+var bottlesOfBeer = 99;
+while (bottlesOfBeer >= 1) {
+    console.log (bottlesOfBeer + ' bottles of beer on the wall');
+    bottlesOfBeer = bottlesOfBeer - 9;
+}
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>For Review</h1>
+			<p>While will repeat the same code over and over until some condition is met.</p>
+			<pre><code>
+for (var i = 1; i <= 10; i++) {
+    console.log (i);
+}
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>Loops with jQuery</h1>
 			<p>With jQuery, we have a method called <code>each()</code> that we can use.</p>
 			<p>You can use each with an anonymous function, or with a named function.</p>
 		</section>

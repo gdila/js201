@@ -1,102 +1,142 @@
 body {
-  color: #333333;
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-size: 2em;
-  font-weight: 400;
-  background-color: #f2f2f2; }
-
-#container {
-  max-width: 1200px;
-  margin: 0 auto;
-  font-size: 0.5em;
-  padding: 100px 0px; }
-  #container p {
-    line-height: 1.4em;
-    text-align: justify; }
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+}
 
 a {
-  -webkit-transition: all 1.5s ease;
-  -moz-transition: all 1.5s ease;
-  transition: all 1.5s ease;
   text-decoration: none;
-  font-weight: 700;
-  color: #1bbc9b; }
-  a:hover {
-    color: #2d3e50; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  padding-bottom: 20px; }
-
-h1 {
-  color: #e64c66;
-  font-size: 2.6em; }
-
-h2 {
-  color: #2d3e50;
-  font-size: 2.4em; }
-
-h3 {
-  color: #1bbc9b;
-  font-size: 2.2em; }
+}
 
 header {
-  padding-bottom: 20px; }
+  margin: 3em 0;
+  padding: 0.5em;
+}
 
 header h1 {
-  font-size: 5em;
+  color: #00A9B4;
+  font-family: 'Pacifico', cursive;
+  font-size: 3em;
   text-align: center;
-  text-shadow: 1px 1px 3px #666666; }
-header nav {
-  margin: 30px 0px;
-  text-align: center; }
-  header nav ul {
-    display: inline; }
-    header nav ul li {
-      -webkit-transition: all 0.2s ease;
-      -moz-transition: all 0.2s ease;
-      transition: all 0.2s ease;
-      display: inline;
-      margin: 15px;
-      font-size: 1.2em; }
-      header nav ul li a {
-        padding: 5px 50px;
-        background-color: #2d3e50;
-        border-radius: 20px;
-        color: #1bbc9b;
-        text-shadow: 1px 1px 3px #666666; }
-        header nav ul li a:hover {
-          background-color: #8ba4be;
-          color: #e64c66; }
+}
 
-.content-box {
-  float: left;
-  height: 550px;
-  margin: 1%;
-  padding: 1%;
-  width: 29%;
-  border-radius: 50px;
-  background-color: #acbdd0; }
-  .content-box img {
-    border-radius: 50px;
-    display: block;
-    margin: 0 auto;
-    padding-bottom: 20px; }
-  .content-box h2 {
-    font-size: 1.6em;
-    text-align: center;
-    text-shadow: 1px 1px 3px #666666; }
-  .content-box:nth-child(3n) {
-    background-color: #f9d2d9; }
-    .content-box:nth-child(3n) h2 {
-      color: #e64c66; }
-  .content-box:nth-child(3n+2) {
-    background-color: #aff4e6; }
-    .content-box:nth-child(3n+2) h2 {
-      color: #1bbc9b; }
+section {
+  padding: 0.5em;
+}
 
-.content-box:nth-child(3n+1) {
-  clear: both; }
+.photos {
+  background: #f8ffff;
+  border-top: 10px solid #c5fbff;
+}
 
-.center {
-  text-align: center; }
+.veggies {
+  background: #f8faf2;
+  border-top: 10px solid #e2edcd;
+}
+
+.bacon {
+  background: #fef7f7;
+  border-top: 10px solid #fac8ca;
+}
+
+.cupcakes {
+  background: #fef9ef;
+  border-top: 10px solid #fae7c0;
+}
+
+.photos a {
+  color: #00A9B4;
+}
+
+.veggies h1,
+.veggies a {
+  color: #92BB44;
+}
+
+.bacon h1,
+.bacon a {
+  color: #F05B62;
+}
+
+.cupcakes h1,
+.cupcakes a {
+  color: #EDAB23;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.photo-grid li {
+  padding: 0.5em;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.photo-grid {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
+  /*padding: 0.5em;*/
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 auto 1em;
+  padding: 0 1em;
+  max-width: 40em;
+}
+
+footer {
+  color: #999;
+  font-size: 0.75em;
+  margin: 5em 0;
+}
+
+.icon img {
+  margin: 2em auto;
+  max-height: 100px;
+  max-width: 100px;
+  width: auto;
+}
+
+.sorting {
+  list-style-type: none;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.sorting li {
+  background: #00A9B4;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.25em 1em;
+  margin: 0 0.5em;
+}
+
+.sorting li:hover {
+  background: #F05B62;
+}
+
+@media (max-width: 800px) {
+  .photo-grid {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .photo-grid {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
