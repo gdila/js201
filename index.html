@@ -600,15 +600,15 @@ links.each(processElem);
 			<p>With an anonymous function:</p>
 			<pre><code>
 $('a').click(function (event) {
-  event.preventDefault();
-  console.log('Not going there!');
+	event.preventDefault();
+	console.log('Not going there!');
 });
 			</code></pre>
 			<p>or</p>
 			<pre><code>
 $('a').on('click', function (event) {
-  event.preventDefault();
-  console.log('Not going there!');
+	event.preventDefault();
+	console.log('Not going there!');
 });
 			</code></pre>
 		</section>
@@ -624,7 +624,7 @@ $('a').on('click', function (event) {
 			<p><code>click()</code> can also be used with a named function:</p>
 			<pre><code>
 function onButtonClick() {
-  console.log('clicked!');
+	console.log('clicked!');
 }
 
 $('#button').click(onButtonClick);
@@ -638,6 +638,63 @@ $('#button').click(onButtonClick);
 				<li>Create a <code>mouseenter()</code> event listener for one image (hint: you may need to add an ID to the image in your HTML so you can find it)</li>
 				<li>Create a <code>click()</code> event listener for your links</li>
 				<li>What should these event listeners do? You decide!</li>
+			</ul>
+		</section>
+
+		<section>
+			<h1>Effects &amp; Animation</h1>
+			<p>Fun pretty things</p>
+			<p>Adding a little flair to our page</p>
+		</section>
+
+		<section>
+			<h1><code>fadeIn()</code></h1>
+			<p>You can make pretty things happen automatically:</p>
+			<pre><code>
+$('#error').fadeIn();
+			</code></pre>
+			<p>Or after an event:</p>
+			<pre><code>
+$('a').click(function (event) {
+	event.preventDefault();
+	$('#error').fadeIn();
+});
+			</code></pre>
+			<p><a href="http://api.jquery.com/fadein/" target="_blank"><code>fadeIn()</code> documentation</a></p>
+		</section>
+
+		<section>
+			<h1>Effect options</h1>
+			<p>Most effects and animations have multiple options that can be passed as arguments. You can control things like timing, delay, and speed.</p>
+			<p>It is best to consult the documentation for the method you want to use.</p>
+		</section>
+
+		<section>
+			<h1><code>fadeIn()</code> with options</h1>
+			<p>These options control duration (default: 400 ms), easing (default: "swing"), and a function to do upon completion.</p>
+			<pre><code>
+$("#menu").click(function() {
+	$("#nav").fadeIn(200, "linear", function() {
+		console.log("Faded in!");
+	});
+});
+			</code></pre>
+		</section>
+
+		<section>
+			<h1>More effects</h1>
+			<p>There are lots of effects and animations.</p>
+			<p>They all have different options and configurations. You should read about them!</p>
+			<p><a href="http://api.jquery.com/category/effects/" target="_blank">effects documentation</a></p>
+		</section>
+
+		<section>
+			<h1>Let's Develop It!</h1>
+			<p>Open <code>main.js</code> in a text editor</p>
+			<ul>
+				<li>Add an effect to your <code>mouseenter()</code> event listener</li>
+				<li><code>fadeIn()</code> the menu on page load, play with the speed and easing options!</li>
+				<li>Try using <code>show()</code>, <code>hide()</code>, or <code>toggle()</code> inside of your <code>click()</code> event listener: what can you show and hide?</li>
 			</ul>
 		</section>
 
